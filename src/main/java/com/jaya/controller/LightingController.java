@@ -44,12 +44,12 @@ public class LightingController {
 				lightingResult = lighting;
 				break;
 			case "delete" :
-				Lighting lightingSelect = lightingService.getLighting(lighting.getIdLighting());
-				if(lightingSelect.equals("")){
-					lightingService.deleteLighting(lighting.getIdLighting());
-					lightingResult=new Lighting();
-					redirect = "redirect:/index";
-				}
+				
+				
+				lightingService.deleteLighting(lighting.getIdLighting());
+				lightingResult=new Lighting();
+				redirect = "redirect:/index";
+			
 				break;
 			case "search":
 				Lighting searchLighting=lightingService.getLighting(lighting.getIdLighting());
